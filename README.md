@@ -6,5 +6,8 @@
 Обязательна автоматизированная верификация результатов вычислений с помощью сторонних библиотек или стороннего ПО (например на Matlab/Python).
 
 # проверка
+<img width="656" height="897" alt="image" src="https://github.com/user-attachments/assets/48641674-63a8-4cb3-80a0-96ea8def5102" />
 
-<img width="661" height="165" alt="image" src="https://github.com/user-attachments/assets/c26c407d-4050-4905-8ce4-68c5c8769d71" />
+
+
+
