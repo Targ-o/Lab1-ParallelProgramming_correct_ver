@@ -1,97 +1,126 @@
 import std;
-
 using namespace std;
 
 vector<vector<double>> readMatrix(const string& filename) {
-	ifstream file(filename);
+    ifstream file(filename);
 
-	if (!file.is_open()) {
-		throw runtime_error("file's can't be opened! file:" + filename);
-	}
+        if (!file.is_open()) {
+            throw runtime_error("file can't be opened! file: " + filename);
+        }
 
-	int n;
-	file >> n;
+    int n;
+    file >> n;
 
-	vector<vector<double>> matrix(n, vector<double>(n));
+    vector<vector<double>> matrix(n, vector<double>(n));
 
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			file >> matrix[i][j];
-		}
-	}
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            file >> matrix[i][j];
+        }
+    }
 
-	return matrix;
+    return matrix;
+
+
 }
 
-vector<vector<double>> umnozenie(const vector<vector<double>>& A, const vector<vector<double>>& B) {
-	int n = A.size();
-	vector<vector<double>> C(n, vector<double>(n, 0.0));
+vector<vector<double>> umnozenie(
+    const vector<vector<double>>& A,
+    const vector<vector<double>>& B
+) {
+    int n = A.size();
 
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			for (int k = 0; k < n; k++) {
-				C[i][j] += A[i][k] * B[k][j];
-			}
-		}
-	}
 
-	return C;
+        vector<vector<double>> C(n, vector<double>(n, 0.0));
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            for (int k = 0; k < n; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+
+    return C;
+
+
 }
 
-void writeMatrix(const string& filename, const vector<vector<double>>& matrix) {
+void writeMatrix(
+    const string& filename,
+    const vector<vector<double>>& matrix
+) {
+    ofstream file(filename);
 
-	ofstream file(filename);
-	int n = matrix.size();
-	file << n << "\n";
 
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			file << matrix[i][j];
+        int n = matrix.size();
 
-			if (j + 1 < n) {
-				file << " ";
-			}
-		}
+    file << n << "\n";
 
-		file << "\n";
-	}
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            file << matrix[i][j];
+
+            if (j + 1 < n) {
+                file << " ";
+            }
+        }
+
+        file << "\n";
+    }
 
 }
 
 int main() {
 
-	try {
+        try {
 
-		auto A = readMatrix("data/matrix_A.txt");
-		auto B = readMatrix("data/matrix_B.txt");
+            vector<int> sizes = {
+                20, 200, 400, 800, 1200, 1600, 2000
+            };
 
-		if (A.size() != B.size()) {
-			throw runtime_error("sizes difference! cannot proceed!");
-		}
+            for (int n : sizes) {
 
-		int n = A.size();
+                string fileA = "data/matrix_a_" + to_string(n) + ".txt";
+                string fileB = "data/matrix_b_" + to_string(n) + ".txt";
 
-		std::println("Matrix size equals:{} x {}", n, n);
+                auto A = readMatrix(fileA);
+                auto B = readMatrix(fileB);
 
-		auto start = chrono::high_resolution_clock::now();
-		auto C = umnozenie(A, B);
-		auto finish = chrono::high_resolution_clock::now();
+                if (A.size() != B.size()) {
+                    throw runtime_error("matrix sizes are different! canot proceed!");
+                }
 
-		chrono::duration<double> time = finish - start;
+                println("Matrix size: {} x {}", n, n);
+                println("Elements count: {}", static_cast<long long>(n) * n);
+                println("Task volume: {}", static_cast<long long>(n) * n * n);
 
-		writeMatrix("results/matrix_C.txt", C);
+                auto start = chrono::high_resolution_clock::now();
 
-		std::println("execution time:{} seconsd", time.count());
+                auto C = umnozenie(A, B);
 
-		std::println("elements count:{}", n * n);
+                auto finish = chrono::high_resolution_clock::now();
 
-		std::println("multiplication result:{}", static_cast<long long>(n) * n * n);
-	}
+                chrono::duration<double> time = finish - start;
 
-	catch (const exception& e) {
-		cerr << "Err:" << e.what() << '\n';
-		return 1;
-	}
+                string resultFile =
+                    "results/matrix_C_" + to_string(n) + ".txt";
 
-	return 0;
+                writeMatrix(resultFile, C);
+
+                println("Execution time: {} seconds", time.count());
+                println("Result: {}", resultFile);
+                println("");
+            }
+
+            println("operation: done!!");
+
+        }
+    catch (const exception& e) {
+        cerr << "Err: " << e.what() << '\n';
+        return 1;
+    }
+
+    return 0;
+
 }

@@ -1259,8 +1259,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/\u0422\u0430\u0440\u0433/Downloads/\u043b\u0430\u0431 1 \u041f\u0430\u0440\u041f/\u043b\u0430\u0431 1 \u041f\u0430\u0440\u041f/build/CMakeFiles/CMakeScratch/TryCompile-pr6ml8"
-      binary: "C:/Users/\u0422\u0430\u0440\u0433/Downloads/\u043b\u0430\u0431 1 \u041f\u0430\u0440\u041f/\u043b\u0430\u0431 1 \u041f\u0430\u0440\u041f/build/CMakeFiles/CMakeScratch/TryCompile-pr6ml8"
+      source: "C:/Users/\u0422\u0430\u0440\u0433/Downloads/\u043b\u0430\u0431 1 \u041f\u0430\u0440\u041f/\u043b\u0430\u0431 1 \u041f\u0430\u0440\u041f/build/CMakeFiles/CMakeScratch/TryCompile-lwe09f"
+      binary: "C:/Users/\u0422\u0430\u0440\u0433/Downloads/\u043b\u0430\u0431 1 \u041f\u0430\u0440\u041f/\u043b\u0430\u0431 1 \u041f\u0430\u0440\u041f/build/CMakeFiles/CMakeScratch/TryCompile-lwe09f"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od"
@@ -1272,11 +1272,11 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Тарг/Downloads/лаб 1 ПарП/лаб 1 ПарП/build/CMakeFiles/CMakeScratch/TryCompile-pr6ml8'
+        Change Dir: 'C:/Users/Тарг/Downloads/лаб 1 ПарП/лаб 1 ПарП/build/CMakeFiles/CMakeScratch/TryCompile-lwe09f'
         
-        Run Build Command(s): C:/PROGRA~1/MIB055~1/18/Insiders/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe -v cmTC_240b7
-        [1/2] C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -D_MBCS  /DWIN32 /D_WINDOWS /EHsc  /Ob0 /Od -MDd -RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_240b7.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_240b7.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1951 --intdir=CMakeFiles\\cmTC_240b7.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x86\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx86\\x86\\link.exe /nologo CMakeFiles\\cmTC_240b7.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_240b7.exe /implib:cmTC_240b7.lib /pdb:cmTC_240b7.pdb /version:0.0 -machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): C:/PROGRA~1/MIB055~1/18/Insiders/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe -v cmTC_10a86
+        [1/2] C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -D_MBCS  /DWIN32 /D_WINDOWS /EHsc  /Ob0 /Od -MDd -RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_10a86.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_10a86.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\18\\Insiders\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --msvc-ver=1951 --intdir=CMakeFiles\\cmTC_10a86.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x86\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100261~1.0\\x86\\mt.exe --manifests  -- C:\\PROGRA~1\\MIB055~1\\18\\Insiders\\VC\\Tools\\MSVC\\1451~1.362\\bin\\Hostx86\\x86\\link.exe /nologo CMakeFiles\\cmTC_10a86.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_10a86.exe /implib:cmTC_10a86.lib /pdb:cmTC_10a86.pdb /version:0.0 -machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
